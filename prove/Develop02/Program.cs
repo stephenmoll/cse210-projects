@@ -12,10 +12,6 @@ class Program
         List<string> prompts = new List<string>();
         List<string> dates = new List<string>();
 
-
-        Console.WriteLine("HI!");
-        Console.WriteLine("I'm Citree! I'll be your Journal Keeper for this writing session!");
-
         while (answer != "5") {
             Console.WriteLine("\nWhat would you like to do?");
             Console.WriteLine("1. Write");
@@ -42,9 +38,7 @@ class Program
                 string page = content._entry;
                 pages.Add(page);
 
-                Console.WriteLine("\nThat was a lovely entry!");
-
-
+                Console.WriteLine("Entry complete! ");
             }
 
             else if (answer == "2") {
@@ -53,13 +47,10 @@ class Program
                 write._prompts = prompts;
                 write._pages = pages;
                 write.DisplayEntries();
-                Console.WriteLine("\nYup, those are some deep entries right there.");
-
+                
             }
 
             else if (answer == "3") {
-
-                Console.WriteLine("Loading deep dark secrets... Kidding XD");
 
                 pages = new List<string>();
                 prompts = new List<string>();
@@ -83,7 +74,7 @@ class Program
 
                 write.Save();
 
-                Console.WriteLine("Data stored successfully!");
+                Console.WriteLine("Journal saved successfully!");
                 
             }
             else if (answer == "5") {
