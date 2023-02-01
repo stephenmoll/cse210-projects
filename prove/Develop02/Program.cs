@@ -38,7 +38,7 @@ class Program
                 string page = content._entry;
                 pages.Add(page);
 
-                Console.WriteLine("Entry complete! ");
+                Console.WriteLine("Entry complete!");
             }
 
             else if (answer == "2") {
