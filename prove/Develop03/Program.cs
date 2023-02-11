@@ -55,6 +55,7 @@ class Program
 
             unusedNums.Remove(randyNum);
             
+            Console.WriteLine("Hit 'Enter' to hide another word from the scripture. Type 'quit' to end the program.");
             input = Console.ReadLine();
             Console.Clear();
             }    
