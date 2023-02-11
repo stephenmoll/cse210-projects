@@ -38,7 +38,6 @@ class Program
         
         Console.WriteLine();
         Console.WriteLine("Welcome to scripture memorizor!");
-        Console.WriteLine("Hit 'Enter' to hide a word from the scripture, or type 'quit' to end the program.");
         Console.WriteLine();
 
         while (input != "quit" && count != 0) {
@@ -55,12 +54,14 @@ class Program
 
             unusedNums.Remove(randyNum);
             
-            Console.WriteLine("Hit 'Enter' to hide another word from the scripture. Type 'quit' to end the program.");
+            Console.WriteLine();
+            Console.Write("Hit 'Enter' to hide a word from the scripture, or type 'quit' to end the program. ");
             input = Console.ReadLine();
             Console.Clear();
             }    
         } 
         Console.WriteLine();
         Console.WriteLine("Bye! See you again soon!");  
+        Console.WriteLine();
     }
 }
