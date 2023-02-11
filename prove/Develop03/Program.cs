@@ -14,12 +14,10 @@ class Program
             "Proverbs:3:5-6:Trust in the Lord with all thine heart; and lean not unto thine own dunderstanding. In all thy ways acknowledge him, and he shall direct thy paths."
             };
 
-
         Random rd = new Random();
         int randomNum = rd.Next(0, scriptures.Count());
         string chosen = scriptures[randomNum];
             
-
         Reference scripture = new Reference(chosen);
 
         string chapter = scripture.GetChapter();
