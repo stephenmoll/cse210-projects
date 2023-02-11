@@ -1,5 +1,7 @@
 using System;
 
+//Extras: scriptures are selected at random each time the program runs
+
 class Program
 {
     static void Main(string[] args)
@@ -34,6 +36,8 @@ class Program
         List<int> unusedNums = finalScripture.GenerateNumberList();
         int count = 1000000;
         
+        Console.WriteLine("Welcome to scripture memorizor!");
+        Console.WriteLine("Hit 'Enter' to hide a word from the scripture, or type 'quit' to end the program.");
 
         while (input != "quit" && count != 0) {
             
@@ -51,7 +55,8 @@ class Program
             
             input = Console.ReadLine();
             Console.Clear();
-            }
-        }   
+            }    
+        } 
+        Console.WriteLine("Bye! See you again soon!");  
     }
 }
