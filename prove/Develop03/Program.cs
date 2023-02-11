@@ -36,8 +36,10 @@ class Program
         List<int> unusedNums = finalScripture.GenerateNumberList();
         int count = 1000000;
         
+        Console.WriteLine();
         Console.WriteLine("Welcome to scripture memorizor!");
         Console.WriteLine("Hit 'Enter' to hide a word from the scripture, or type 'quit' to end the program.");
+        Console.WriteLine();
 
         while (input != "quit" && count != 0) {
             
@@ -57,6 +59,7 @@ class Program
             Console.Clear();
             }    
         } 
+        Console.WriteLine();
         Console.WriteLine("Bye! See you again soon!");  
     }
 }
