@@ -15,22 +15,28 @@ public class Listing : Overlord{
         : base(activity, description) {    
             // Getters and setters not needed
         }
+
     //Methods
-    public void ShowPrompt() {
+    public string ShowPrompt() {
         Random _rd = new Random();
         int randomNum = _rd.Next(0, 6);
-        
-        Console.WriteLine($"--- {_prompts[randomNum]} ---");
+        string prompt = _prompts[randomNum];
+
+        Console.WriteLine($"--- {prompt} ---");
+
+        return prompt;
     }
     public void DisplayEntryCount() {
         int entryCount = _entries.Count();
         Console.WriteLine($"Brilliant! We wrote {entryCount} entries this session!");
     }
 
-    public void GetEntry() {
+    public string GetEntry() {
         Console.Write("> ");
         string entry = Console.ReadLine();
 
         _entries.Add(entry);
+
+        return entry;
     }
 }

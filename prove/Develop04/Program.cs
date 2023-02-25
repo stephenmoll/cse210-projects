@@ -14,8 +14,11 @@ class Program
             "1. Breathing",
             "2. Reflecting",
             "3. Listing",
-            "4. Quit"
+            "4. View Entries",
+            "5. Quit"
         };
+
+        List<string> entries = new List<string>();
 
         Overlord neuteral = new Overlord("blank", "blank");
 
@@ -23,11 +26,9 @@ class Program
 
         Console.WriteLine("Welcome to the Mindfulness Program");
 
-        while (choice != "4") {
-
+        while (choice != "5") {
 
             neuteral.ShowWaitingAnimation();
-
 
             foreach (string option in options) {
                 Console.WriteLine(option);
@@ -59,11 +60,10 @@ class Program
                     
                     currentTime = DateTime.Now;
                 }
-
                 Console.WriteLine();
-                breathing.EndPhrase();
-                
+                breathing.EndPhrase();      
             }
+
             else if (choice == "2") {
 
                 Console.Clear();
@@ -107,29 +107,51 @@ class Program
                 DateTime currentTime = DateTime.Now;
                 DateTime futureTime = listing.GetFutureTime(duration);
 
-                listing.ShowPrompt();
+                string prompt = listing.ShowPrompt();
+                entries.Add(prompt);
                 listing.ShowWaitingAnimation();
 
                 while (currentTime <= futureTime) {
                     
-                    listing.GetEntry();
+                    string entry = listing.GetEntry();
+
+                    entries.Add(entry);
 
                     currentTime = DateTime.Now;
-
                 }
+
                 Console.WriteLine();
                 listing.DisplayEntryCount();
                 Console.WriteLine();
                 listing.EndPhrase();
             }
-
             else if (choice == "4") {
+
+                if (entries.Count() > 0) {
+
+                    Console.WriteLine("Here are your entries: \n");
+
+                    foreach(string item in entries) {
+                        Console.WriteLine(item);
+                    }
+                }
+
+                else if (entries.Count() < 1) {
+                    Console.WriteLine("No entries available to display, add an entry with the listing activity");
+                }
+
+                Console.WriteLine("Hit enter to continue...");
+                Console.ReadLine();     
+            }
+
+            else if (choice == "5") {
                 break;
             }
+
             else {
                 Console.WriteLine($"Failed to run with choice '{choice}', inappropriate value input");
             }
         }
-  
+ 
     }
 }
