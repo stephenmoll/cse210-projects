@@ -12,7 +12,6 @@ public class Reflecting : Overlord{
     "How can you keep this experience in mind in the future?",
     };
     
-
     // Constructors
     public Reflecting(string activity, string description) 
         : base(activity, description) {
@@ -34,8 +33,4 @@ public class Reflecting : Overlord{
 
         Console.WriteLine($"> {_secondaryPrompts[randomNum]}");
     }
-
-   
-
-    
 }
