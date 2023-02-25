@@ -16,10 +16,11 @@ class Program
             "3. Listing",
             "4. View Entries",
             "5. Quit"
+
         };
-
+        // For future use to exceed requirements
         List<string> entries = new List<string>();
-
+      
         Overlord neuteral = new Overlord("blank", "blank");
 
         string choice = "0";
@@ -61,9 +62,8 @@ class Program
                     currentTime = DateTime.Now;
                 }
                 Console.WriteLine();
-                breathing.EndPhrase();      
+                breathing.EndPhrase();            
             }
-
             else if (choice == "2") {
 
                 Console.Clear();
@@ -89,13 +89,16 @@ class Program
                     reflecting.ShowWaitingAnimation();
                     currentTime = DateTime.Now;
                 }
+
                 Console.WriteLine();
                 reflecting.EndPhrase();
+
             }
             else if (choice == "3") {
                 Console.Clear();
 
                 Listing listing = new Listing("Listing", descriptions[2]);
+
 
                 listing.StartPhrase();
                 listing.DisplayDescription();
@@ -119,12 +122,12 @@ class Program
 
                     currentTime = DateTime.Now;
                 }
-
                 Console.WriteLine();
                 listing.DisplayEntryCount();
                 Console.WriteLine();
                 listing.EndPhrase();
             }
+
             else if (choice == "4") {
 
                 if (entries.Count() > 0) {
@@ -135,15 +138,12 @@ class Program
                         Console.WriteLine(item);
                     }
                 }
-
                 else if (entries.Count() < 1) {
                     Console.WriteLine("No entries available to display, add an entry with the listing activity");
                 }
-
                 Console.WriteLine("Hit enter to continue...");
-                Console.ReadLine();     
+                Console.ReadLine();              
             }
-
             else if (choice == "5") {
                 break;
             }
@@ -152,6 +152,5 @@ class Program
                 Console.WriteLine($"Failed to run with choice '{choice}', inappropriate value input");
             }
         }
- 
     }
 }

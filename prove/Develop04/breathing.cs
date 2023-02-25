@@ -10,6 +10,7 @@ public class Breathing : Overlord {
             _breatheIn = breatheIn;
             _holdTime = holdTime;
         }
+
     // Methods
 
     public void BreathingActivity() {
@@ -56,7 +57,6 @@ public class Breathing : Overlord {
             Console.WriteLine("Error, bool neither true nor false");
             _breatheIn = true;
         }
-
         Console.WriteLine();
     }
 }

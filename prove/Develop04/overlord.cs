@@ -9,8 +9,11 @@ public class Overlord {
 
         _activity = activity;
         _description = description;
+
     }
+
     // Methods
+
     public void StartPhrase() {
         Console.WriteLine($"Allow us to begin the {_activity} activity.");
     }
@@ -22,12 +25,14 @@ public class Overlord {
     public void DisplayDescription() {
         Console.WriteLine(_description);
     }
+
     public int GetDuration() {
         Console.WriteLine("How long, in seconds, would you like for this session? : ");
         string num = Console.ReadLine();
         _duration = Int32.Parse(num);
         return _duration;
     }
+
     public System.DateTime GetFutureTime(int seconds) {
         DateTime time = DateTime.Now;
 
@@ -62,6 +67,7 @@ public class Overlord {
             
             count += 1;
         }
-        Console.WriteLine(); 
+        Console.WriteLine();
+       
     }
 }
