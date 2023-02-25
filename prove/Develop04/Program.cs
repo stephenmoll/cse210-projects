@@ -4,8 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-
-
         string[] descriptions = new string[] {
             "This activity will help you relax by slowly walking you through your breathing in and out. Clear your mind and focus on your breathing.",
             "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.",
@@ -17,7 +15,6 @@ class Program
             "2. Reflecting",
             "3. Listing",
             "4. Quit"
-
         };
 
         Overlord neuteral = new Overlord("blank", "blank");
@@ -67,7 +64,6 @@ class Program
                 breathing.EndPhrase();
                 
             }
-
             else if (choice == "2") {
 
                 Console.Clear();
@@ -87,27 +83,19 @@ class Program
                 reflecting.DisplayPrompt();
                 reflecting.ShowWaitingAnimation();
 
-
                 while (currentTime <= futureTime) {
 
                     reflecting.DisplaySecondary();
                     reflecting.ShowWaitingAnimation();
                     currentTime = DateTime.Now;
-
                 }
-
-
                 Console.WriteLine();
                 reflecting.EndPhrase();
-
-
             }
-
             else if (choice == "3") {
                 Console.Clear();
 
                 Listing listing = new Listing("Listing", descriptions[2]);
-
 
                 listing.StartPhrase();
                 listing.DisplayDescription();
@@ -129,7 +117,6 @@ class Program
                     currentTime = DateTime.Now;
 
                 }
-
                 Console.WriteLine();
                 listing.DisplayEntryCount();
                 Console.WriteLine();

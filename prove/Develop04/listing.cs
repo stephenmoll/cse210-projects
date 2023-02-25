@@ -15,8 +15,6 @@ public class Listing : Overlord{
         : base(activity, description) {    
             // Getters and setters not needed
         }
-    
-
     //Methods
     public void ShowPrompt() {
         Random _rd = new Random();

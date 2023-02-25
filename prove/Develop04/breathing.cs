@@ -27,13 +27,10 @@ public class Breathing : Overlord {
                 Console.Write("\b \b");
                 holding -= 1;
             }
-
             _breatheIn = false;
 
             Console.WriteLine();
-
         } 
-        
         else if (!_breatheIn) {
 
             Console.Write("Breathe out... ");
@@ -57,8 +54,6 @@ public class Breathing : Overlord {
             Console.WriteLine("Error, bool neither true nor false");
             _breatheIn = true;
         }
-
         Console.WriteLine();
     }
-
 }

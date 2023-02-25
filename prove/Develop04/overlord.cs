@@ -11,7 +11,6 @@ public class Overlord {
         _description = description;
 
     }
-
     // Methods
 
     public void StartPhrase() {
@@ -39,7 +38,6 @@ public class Overlord {
         DateTime futureTime = time.AddSeconds(seconds);
 
         return futureTime;
-
     }
 
     public void ShowWaitingAnimation() {
@@ -68,7 +66,6 @@ public class Overlord {
             
             count += 1;
         }
-        Console.WriteLine();
-       
+        Console.WriteLine();  
     }
 }
