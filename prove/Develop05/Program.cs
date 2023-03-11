@@ -124,6 +124,8 @@ class Program
 
                     goals.Add(feelGood);
 
+
+
                 }
             }
 
@@ -166,7 +168,7 @@ class Program
                         string line = item.Serialize();
                         // Write the sortedrmation to the save file
                         saveFile.WriteLine(line);
-                    }     
+                    }
                 }
             }
 
@@ -256,6 +258,7 @@ class Program
                 break;
 
             }
+            
         }
     }
 }

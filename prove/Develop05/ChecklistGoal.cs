@@ -4,7 +4,6 @@ public class ChecklistGoal : Goal {
     private int _timesToComplete;
     private int _timesComplete;
 
-
     // Constructors
     public ChecklistGoal(string title, string desc, int value, bool isComplete, int timesToComplete) 
         : base(title, desc, value) {
@@ -69,7 +68,4 @@ public class ChecklistGoal : Goal {
             _value += _value * 3;
         }
     }
-
-
-
 }

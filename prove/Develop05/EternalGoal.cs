@@ -35,14 +35,5 @@ public class EternalGoal : Goal {
 
         EternalGoal eternal = new EternalGoal(_title, _desc, _value);
         return eternal;
-
-        
-
-
     }
-
-
-
-
-
 }
