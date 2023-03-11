@@ -4,6 +4,7 @@ public class ChecklistGoal : Goal {
     private int _timesToComplete;
     private int _timesComplete;
 
+
     // Constructors
     public ChecklistGoal(string title, string desc, int value, bool isComplete, int timesToComplete) 
         : base(title, desc, value) {
@@ -20,6 +21,7 @@ public class ChecklistGoal : Goal {
     }
 
     // Methods
+
         public override string Serialize()
     {
         string serial = $"ChecklistGoal|{_title}|{_desc}|{_value}|{_timesComplete}|{_timesToComplete}|{_isComplete}";
@@ -39,7 +41,9 @@ public class ChecklistGoal : Goal {
 
         ChecklistGoal checklist = new ChecklistGoal(_title, _desc, _value, _isComplete, _timesToComplete);
         return checklist;
+
     }
+
     public override void DisplayGoal()
     {
 
@@ -56,6 +60,7 @@ public class ChecklistGoal : Goal {
     public override void CompleteGoal() {
         if (_timesComplete < _timesToComplete) {
             _timesComplete += 1;
+
         }
 
         if (_timesComplete == _timesToComplete) {
@@ -64,4 +69,7 @@ public class ChecklistGoal : Goal {
             _value += _value * 3;
         }
     }
+
+
+
 }

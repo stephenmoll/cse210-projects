@@ -26,4 +26,6 @@ public class FeelGoodGoal : Goal {
         string info = $"FeelGoodGoal|{_title}|{_desc}";
         return info;
     }
+
+
 }

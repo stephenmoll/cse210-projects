@@ -26,7 +26,8 @@ public class SimpleGoal : Goal {
     {
         string[] info = _line.Split("|");
         Console.WriteLine("This method is running");
-     
+
+        
         _title = info[1];
         _desc = info[2];
         _value = Int32.Parse(info[3]);
@@ -35,6 +36,7 @@ public class SimpleGoal : Goal {
         SimpleGoal simple = new SimpleGoal(_title, _desc, _value, _isComplete);
 
         return simple;
+
     }
 
     public override void DisplayGoal()

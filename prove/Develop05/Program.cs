@@ -11,6 +11,7 @@ class Program
         int total = 0;
         string choice = "";
 
+
         // Open a while loop that runs as long as the user doesn't choose to quit
         while (choice != "6") {
 
@@ -143,6 +144,7 @@ class Program
                 // Pause here to let the user review their list of goals
                 Console.WriteLine("Hit enter to continue... ");
                 Console.ReadLine();
+
             }
 
             // If the user chooses to save their goals
@@ -164,7 +166,7 @@ class Program
                         string line = item.Serialize();
                         // Write the sortedrmation to the save file
                         saveFile.WriteLine(line);
-                    }  
+                    }     
                 }
             }
 
@@ -205,9 +207,7 @@ class Program
 
                         }
                     }
-
                 }
-
             }
             
             // If the user chooses to complete a goal
@@ -244,6 +244,7 @@ class Program
                 // Yay! They completed a goal!
                 Console.WriteLine("Goal complete!");
 
+
             }
 
             // If the user chooses to quit
@@ -253,6 +254,7 @@ class Program
                 Console.WriteLine("Thank you for using the goal setting program. Hit enter to exit.");
                 Console.ReadLine();
                 break;
+
             }
         }
     }

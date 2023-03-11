@@ -45,4 +45,5 @@ public class Goal {
     public int GetValue() {
         return _value;
     }
+
 }
