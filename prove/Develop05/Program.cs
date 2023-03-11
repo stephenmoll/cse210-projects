@@ -11,7 +11,6 @@ class Program
         int total = 0;
         string choice = "";
 
-
         // Open a while loop that runs as long as the user doesn't choose to quit
         while (choice != "6") {
 
@@ -124,9 +123,7 @@ class Program
 
                     goals.Add(feelGood);
 
-
                 }
-
             }
 
             // If the user chooses to view the list of goals
@@ -146,7 +143,6 @@ class Program
                 // Pause here to let the user review their list of goals
                 Console.WriteLine("Hit enter to continue... ");
                 Console.ReadLine();
-
             }
 
             // If the user chooses to save their goals
@@ -202,11 +198,18 @@ class Program
                             ChecklistGoal checklist = new ChecklistGoal(line);
                             goals.Add(checklist);
                         }
+
+                        else if (info[0] == "FeelGoodGoal") {
+                            FeelGoodGoal feelgood = new FeelGoodGoal(line);
+                            goals.Add(feelgood);
+
+                        }
                     }
+
                 }
+
             }
             
-
             // If the user chooses to complete a goal
             else if (choice == "5") {
 
@@ -224,6 +227,7 @@ class Program
                     line.DisplayGoal();
                     count += 1;
                 }
+
                 Console.WriteLine();
                 Console.WriteLine("Which goal would you like to complete? ");
                 // Take an input from the user and convert it into an int, 
@@ -241,14 +245,14 @@ class Program
                 Console.WriteLine("Goal complete!");
 
             }
-            // If theuser chooses to quit
+
+            // If the user chooses to quit
             else if (choice == "6") {
 
                 // The user has chosen the terminate the program. Let them know.
                 Console.WriteLine("Thank you for using the goal setting program. Hit enter to exit.");
                 Console.ReadLine();
                 break;
-
             }
         }
     }

@@ -24,6 +24,7 @@ public class Goal {
     // Methods
     public virtual string Serialize() {
         // Code here
+        Console.Write("Technically this method will never run.");
         return null;
     }
 
@@ -44,5 +45,4 @@ public class Goal {
     public int GetValue() {
         return _value;
     }
-
 }
