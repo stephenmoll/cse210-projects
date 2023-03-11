@@ -1,0 +1,4 @@
+200
+SimpleGoal|Repair cartridge|Repair the web cartridge that broke on the way to work this morning|90|False
+ChecklistGoal|Build cartridges|Build three additional web cartridges because I keep running out|150|1|3|False
+EternalGoal|Freidnly Neighborhood Spiderman|Help out wherever I find myself to be as the friendly neighborhood spiderman everyone knows and loves|200
