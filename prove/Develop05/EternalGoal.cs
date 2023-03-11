@@ -2,7 +2,6 @@ public class EternalGoal : Goal {
 
     // Attributes
     
-
     // Constructors
     public EternalGoal(string title, string desc, int value) : base(title, desc, value) {
         // no necessary code here
@@ -36,13 +35,5 @@ public class EternalGoal : Goal {
         EternalGoal eternal = new EternalGoal(_title, _desc, _value);
         return eternal;
 
-        
-
-
     }
-
-
-
-
-
 }
